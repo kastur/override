@@ -36,7 +36,7 @@ public class RandomWalkLocationProvider extends Service {
     };
 
     Location mLocation;
-    Timer mTaskTimer;
+    Timer mTaskTimer = new Timer("PeriodicRandomWalkLocationUpdates");
     TimerTask mPeriodicReportTask = new TimerTask() {
 
         @Override
@@ -70,8 +70,7 @@ public class RandomWalkLocationProvider extends Service {
         mLocation.setLatitude(0.0);
         mLocation.setLongitude(0.0);
 
-        mTaskTimer = new Timer();
-        mTaskTimer.scheduleAtFixedRate(mPeriodicReportTask, 500, 10000);
+        mTaskTimer.scheduleAtFixedRate(mPeriodicReportTask, 500, 5000);
     }
 
     @Override

@@ -7,11 +7,23 @@
 
     <TextView android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              android:text="Override Location"
+              android:text="DEMO"
               android:textSize="12pt"
-              android:paddingBottom="10pt"
+              android:paddingBottom="1pt"
+              android:paddingLeft="10pt"
               android:paddingTop="2pt"
                />
+
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="OVERRIDE: Injecting Synthetic Sensor Data for Improved Context-Aware Apps and Controlled Context Release."
+              android:textSize="6pt"
+              android:paddingRight="10pt"
+              android:paddingLeft="10pt"
+              android:paddingTop="1pt"
+              android:paddingBottom="10pt"
+            />
+
 
     <Button android:id="@+id/btnStart"
             android:layout_width="fill_parent"
@@ -19,7 +31,14 @@
             android:textSize="12pt"
             android:paddingBottom="10pt"
             android:paddingTop="2pt"
-            android:text="Click to receive location updates..." />
+            android:text="Click to receive synthetic sensor data via native API" />
+
+
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingBottom="10pt"
+              android:paddingTop="10pt"
+              android:text="Well...not really...since the LocationManager and SensorManager are not implemented as part of the Android OS for this particular app!" />
 
     <TextView android:id="@+id/txtLocation"
               android:layout_width="fill_parent"
@@ -27,6 +46,13 @@
               android:paddingBottom="10pt"
               android:paddingTop="10pt"
               android:text="---LOCATION UPDATES RECEIVED HERE---" />
+
+    <TextView android:id="@+id/txtAccel"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingBottom="10pt"
+              android:paddingTop="10pt"
+              android:text="---ACCEL UPDATES RECEIVED HERE---" />
 
 </LinearLayout>
 

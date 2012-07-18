@@ -15,6 +15,7 @@
         </activity>
 
         <service android:name="android.override.location.OverrideLocationService" />
+        <service android:name="android.override.sensor.OverrideSensorService" />
         <service android:name="android.override.context.RandomWalkLocationProvider" />
 
     </application>

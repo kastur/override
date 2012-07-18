@@ -15,6 +15,7 @@ public final class R {
     }
     public static final class id {
         public static final int btnStart=0x7f050000;
+        public static final int txtAccel=0x7f050002;
         public static final int txtLocation=0x7f050001;
     }
     public static final class layout {
