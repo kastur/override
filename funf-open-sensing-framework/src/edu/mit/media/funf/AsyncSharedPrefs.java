@@ -100,6 +100,11 @@ public class AsyncSharedPrefs implements SharedPreferences, OnSharedPreferenceCh
         }
     }
 
+    @Override
+    public Set<String> getStringSet(String s, Set<String> strings) {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
     public void unregisterOnSharedPreferenceChangeListener(OnSharedPreferenceChangeListener listener) {
         synchronized(this) {
         	mListeners.remove(listener);
@@ -169,6 +174,12 @@ public class AsyncSharedPrefs implements SharedPreferences, OnSharedPreferenceCh
                 return this;
             }
         }
+
+        @Override
+        public Editor putStringSet(String s, Set<String> strings) {
+            return null;  //To change body of implemented methods use File | Settings | File Templates.
+        }
+
         public Editor putInt(String key, int value) {
             synchronized (this) {
                 mModified.put(key, value);
@@ -254,7 +265,12 @@ public class AsyncSharedPrefs implements SharedPreferences, OnSharedPreferenceCh
 			}).start();
 			return true;
 		}
-	}
+
+        @Override
+        public void apply() {
+            //To change body of implemented methods use File | Settings | File Templates.
+        }
+    }
 	
 	
 	// STATIC apply
